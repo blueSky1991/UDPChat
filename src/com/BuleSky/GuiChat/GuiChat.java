@@ -41,18 +41,14 @@ public class GuiChat  extends JFrame {
 		setSize(400, 400);
 		setResizable(false);//设置窗口的大小不可调整
 		setLocationRelativeTo(null); //窗口居中
-		
-		
 		//  窗口的NORRH部分
 		stateLB = new JLabel("当前未启动监听");
 		stateLB.setHorizontalAlignment(JLabel.RIGHT);
-		
-		
 		// 窗口的CENTER 部分
 		centerTextArea = new JTextArea();
 		centerTextArea.setEditable(false);// 不可编辑
         centerTextArea.setBackground(new Color(211, 211, 211));
-        
+//        centerTextArea.setBackground(new Color(211, 211, 211));
         //窗口的SOUTH部分
         southPanel = new JPanel(new BorderLayout());
         inputTextArea = new JTextArea(5, 20);//内容输入区域
@@ -67,7 +63,6 @@ public class GuiChat  extends JFrame {
         bottomPanel.add(clearBtn);
         southPanel.add(new JScrollPane(inputTextArea),BorderLayout.CENTER);
         southPanel.add(bottomPanel,BorderLayout.SOUTH);
-        
         //  添加窗口 NORTH CENTER SOUTH  部分的组件
         add(stateLB,BorderLayout.NORTH);
         add(new JScrollPane(centerTextArea),BorderLayout.CENTER);
